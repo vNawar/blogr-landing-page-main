@@ -1,16 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
 
 $veryLightRed: hsl(13, 100%, 72%);
+$veryLightRed2: hsl(355, 100%, 74%);
 $lightRed: hsl(353, 100%, 62%);
 $lightRed2: hsl(356, 100%, 66%);
-$veryLightRed2: hsl(355, 100%, 74%);
+
+$grayishBlue: hsl(240, 2%, 79%);
+$veryDarkBlue: hsl(207, 13%, 34%);
+$veryDarkGrayishBlue: hsl(207, 13%, 34%);
 $veryDarkGreyBlue: hsl(237, 17%, 21%);
+$veryDarkBlackBlue: hsl(240, 10%, 16%);
 $veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #title {
-  background: no-repeat url(../images/bg-pattern-intro.svg), linear-gradient(to right, $veryLightRed, $lightRed);
+  background: no-repeat url(../images/bg-pattern-intro.svg), linear-gradient(to bottom, $veryLightRed, $lightRed);
   color: white;
   font-family: "Overpass", sans-serif;
+  height: 600px;
+  border-bottom-left-radius: 100px;
   button {
     font-weight: 700;
     border-style: none;
