@@ -23,33 +23,77 @@ body {
 }
 
 #title {
-  background: no-repeat url(../images/bg-pattern-intro.svg), linear-gradient(to bottom, $veryLightRed, $lightRed);
+  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(to bottom, $veryLightRed, $lightRed);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -320px -250px, 0;
+  background-size: 80em, auto;
   color: white;
   font-family: "Overpass", sans-serif;
-  height: 600px;
+  height: 570px;
   border-bottom-left-radius: 100px;
-  button {
-    font-weight: 700;
-    border-style: none;
-    background-color: white;
-    color: $lightRed2;
-    font-family: "Ubuntu", sans-serif;
-    border-radius: 20px;
-    padding: 10px;
-    width: 120px;
-    margin-bottom: 10px;
-    &:hover {
-      background-color: $veryLightRed2;
+  text-align: center;
+
+  .title-content {
+    padding: 0 24px;
+
+    h1 {
+      font-size: 2.3em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 38px;
+    }
+
+    .start-free,
+    .learn-more {
+      font-size: 1em;
+      font-weight: 700;
+      border-style: none;
+      background-color: white;
+      color: $lightRed2;
+      font-family: "Ubuntu", sans-serif;
+      border-radius: 30px;
+      height: 44px;
+      width: 135px;
+      &:hover {
+        background-color: $veryLightRed2;
+        color: white;
+      }
+    }
+
+    .learn-more {
+      margin-left: 10px;
+      background-color: transparent;
+      border: 1px solid white;
       color: white;
+      &:hover {
+        background-color: white;
+        color: $veryLightRed2;
+      }
     }
   }
-  .learn-more {
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    &:hover {
-      background-color: white;
-      color: $veryLightRed2;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+
+    .logo {
+    }
+
+    .icon-hamburger {
+      background: url(../images/icon-hamburger.svg) no-repeat;
+      display: inline-block;
+      width: 32px;
+      height: 18px;
+    }
+
+    .icon-hamburger-button {
+      background-color: transparent;
+      border-style: none;
     }
   }
 }

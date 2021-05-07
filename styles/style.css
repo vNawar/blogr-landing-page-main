@@ -10,40 +10,84 @@ body {
 }
 
 #title {
-  background: no-repeat url(../images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
-  background: no-repeat url(../images/bg-pattern-intro.svg), linear-gradient(to bottom, #ff8f70, #ff3d54);
+  background-image: url(../images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(to bottom, #ff8f70, #ff3d54);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -320px -250px, 0;
+  background-size: 80em, auto;
   color: white;
   font-family: "Overpass", sans-serif;
-  height: 600px;
+  height: 570px;
   border-bottom-left-radius: 100px;
+  text-align: center;
 }
 
-#title button {
+#title .title-content {
+  padding: 0 24px;
+}
+
+#title .title-content h1 {
+  font-size: 2.3em;
+  margin: 0;
+}
+
+#title .title-content p {
+  font-size: 1.2em;
+  margin-bottom: 38px;
+}
+
+#title .title-content .start-free,
+#title .title-content .learn-more {
+  font-size: 1em;
   font-weight: 700;
   border-style: none;
   background-color: white;
   color: #ff525d;
   font-family: "Ubuntu", sans-serif;
-  border-radius: 20px;
-  padding: 10px;
-  width: 120px;
-  margin-bottom: 10px;
+  border-radius: 30px;
+  height: 44px;
+  width: 135px;
 }
 
-#title button:hover {
+#title .title-content .start-free:hover,
+#title .title-content .learn-more:hover {
   background-color: #ff7a85;
   color: white;
 }
 
-#title .learn-more {
+#title .title-content .learn-more {
+  margin-left: 10px;
   background-color: transparent;
   border: 1px solid white;
   color: white;
 }
 
-#title .learn-more:hover {
+#title .title-content .learn-more:hover {
   background-color: white;
   color: #ff7a85;
+}
+
+#title nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 20px;
+  margin-bottom: 40px;
+}
+
+#title nav .icon-hamburger {
+  background: url(../images/icon-hamburger.svg) no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+}
+
+#title nav .icon-hamburger-button {
+  background-color: transparent;
+  border-style: none;
 }
 
 #brief {
