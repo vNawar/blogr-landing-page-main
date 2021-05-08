@@ -6,11 +6,13 @@ $lightRed: hsl(353, 100%, 62%);
 $lightRed2: hsl(356, 100%, 66%);
 
 $grayishBlue: hsl(240, 2%, 79%);
+$grayishBlue2: hsl(240, 2%, 89%);
 $veryDarkBlue: hsl(208, 49%, 24%);
 $veryDarkGrayishBlue: hsl(207, 13%, 34%);
 $veryDarkGreyBlue: hsl(237, 17%, 21%);
 $veryDarkBlackBlue: hsl(240, 10%, 16%);
 $veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+$veryDarkDesaturatedBlue2: hsl(237, 23%, 28%);
 
 html {
   margin: 0;
@@ -39,13 +41,12 @@ p {
   background-position: -320px -250px, 0;
   background-size: 80em, auto;
   color: white;
-  height: 570px;
   border-bottom-left-radius: 100px;
   text-align: center;
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 
   .title-content {
-    padding: 0 24px;
+    padding: 0 24px 100px;
 
     h1 {
       font-size: 2.3em;
@@ -111,6 +112,7 @@ p {
 
 #intro {
   text-align: center;
+  margin-bottom: 250px;
 
   img {
     width: 100%;
@@ -127,7 +129,6 @@ p {
 
   .intro-content {
     padding: 0 36px;
-    margin-bottom: 100px;
     h3 {
       font-size: 1.75em;
       color: $veryDarkBlue;
@@ -143,9 +144,64 @@ p {
 }
 
 #brief {
-  background: linear-gradient(to right, $veryDarkGreyBlue, $veryDarkDesaturatedBlue);
+  background-image: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center -240px;
+  background-size: 160%;
+  background-color: $veryDarkDesaturatedBlue2;
+  color: white;
+  border-radius: 0 100px;
+
+  text-align: center;
+  margin-bottom: 50px;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: -180px;
+  }
+
+  .brief-content {
+    padding: 0 32px 100px;
+
+    h2 {
+      font-size: 2.4em;
+      margin: 0;
+    }
+
+    p {
+      line-height: 2em;
+      color: $grayishBlue2;
+    }
+  }
+}
+
+#features {
+  text-align: center;
+  margin-bottom: 100px;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .features-content {
+    padding: 0 36px;
+    h3 {
+      font-size: 1.75em;
+      color: $veryDarkBlue;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.7em;
+      color: $veryDarkGrayishBlue;
+    }
+  }
 }
 
 #footer {
-  background-color: $veryDarkGreyBlue;
+  background-color: $veryDarkBlackBlue;
 }

@@ -27,14 +27,13 @@ p {
   background-position: -320px -250px, 0;
   background-size: 80em, auto;
   color: white;
-  height: 570px;
   border-bottom-left-radius: 100px;
   text-align: center;
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 }
 
 #title .title-content {
-  padding: 0 24px;
+  padding: 0 24px 100px;
 }
 
 #title .title-content h1 {
@@ -103,6 +102,7 @@ p {
 
 #intro {
   text-align: center;
+  margin-bottom: 250px;
 }
 
 #intro img {
@@ -120,7 +120,6 @@ p {
 
 #intro .intro-content {
   padding: 0 36px;
-  margin-bottom: 100px;
 }
 
 #intro .intro-content h3 {
@@ -136,11 +135,65 @@ p {
 }
 
 #brief {
-  background: -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
-  background: linear-gradient(to right, #2c2d3f, #3f4164);
+  background-image: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center -240px;
+  background-size: 160%;
+  background-color: #373958;
+  color: white;
+  border-radius: 0 100px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#brief img {
+  width: 100%;
+  max-width: 400px;
+  margin-top: -180px;
+}
+
+#brief .brief-content {
+  padding: 0 32px 100px;
+}
+
+#brief .brief-content h2 {
+  font-size: 2.4em;
+  margin: 0;
+}
+
+#brief .brief-content p {
+  line-height: 2em;
+  color: #e2e2e4;
+}
+
+#features {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#features img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#features .features-content {
+  padding: 0 36px;
+}
+
+#features .features-content h3 {
+  font-size: 1.75em;
+  color: #1f3f5b;
+  margin-bottom: 10px;
+}
+
+#features .features-content p {
+  font-size: 1em;
+  line-height: 1.7em;
+  color: #4b5862;
 }
 
 #footer {
-  background-color: #2c2d3f;
+  background-color: #25252d;
 }
 /*# sourceMappingURL=style.css.map */
