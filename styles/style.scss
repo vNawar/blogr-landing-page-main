@@ -6,7 +6,7 @@ $lightRed: hsl(353, 100%, 62%);
 $lightRed2: hsl(356, 100%, 66%);
 
 $grayishBlue: hsl(240, 2%, 79%);
-$veryDarkBlue: hsl(207, 13%, 34%);
+$veryDarkBlue: hsl(208, 49%, 24%);
 $veryDarkGrayishBlue: hsl(207, 13%, 34%);
 $veryDarkGreyBlue: hsl(237, 17%, 21%);
 $veryDarkBlackBlue: hsl(240, 10%, 16%);
@@ -22,16 +22,27 @@ body {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: "Overpass", sans-serif;
+}
+
 #title {
   background-image: url(../images/bg-pattern-intro.svg), linear-gradient(to bottom, $veryLightRed, $lightRed);
   background-repeat: no-repeat, no-repeat;
   background-position: -320px -250px, 0;
   background-size: 80em, auto;
   color: white;
-  font-family: "Overpass", sans-serif;
   height: 570px;
   border-bottom-left-radius: 100px;
   text-align: center;
+  margin-bottom: 110px;
 
   .title-content {
     padding: 0 24px;
@@ -94,6 +105,39 @@ body {
     .icon-hamburger-button {
       background-color: transparent;
       border-style: none;
+    }
+  }
+}
+
+#intro {
+  text-align: center;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.7em;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: $veryDarkBlue;
+  }
+
+  .intro-content {
+    padding: 0 36px;
+    margin-bottom: 100px;
+    h3 {
+      font-size: 1.75em;
+      color: $veryDarkBlue;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.7em;
+      color: $veryDarkGrayishBlue;
     }
   }
 }

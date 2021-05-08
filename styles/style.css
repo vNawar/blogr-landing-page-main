@@ -9,6 +9,17 @@ body {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: "Overpass", sans-serif;
+}
+
 #title {
   background-image: url(../images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background-image: url(../images/bg-pattern-intro.svg), linear-gradient(to bottom, #ff8f70, #ff3d54);
@@ -16,10 +27,10 @@ body {
   background-position: -320px -250px, 0;
   background-size: 80em, auto;
   color: white;
-  font-family: "Overpass", sans-serif;
   height: 570px;
   border-bottom-left-radius: 100px;
   text-align: center;
+  margin-bottom: 110px;
 }
 
 #title .title-content {
@@ -88,6 +99,40 @@ body {
 #title nav .icon-hamburger-button {
   background-color: transparent;
   border-style: none;
+}
+
+#intro {
+  text-align: center;
+}
+
+#intro img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#intro h2 {
+  font-size: 1.7em;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #1f3f5b;
+}
+
+#intro .intro-content {
+  padding: 0 36px;
+  margin-bottom: 100px;
+}
+
+#intro .intro-content h3 {
+  font-size: 1.75em;
+  color: #1f3f5b;
+  margin-bottom: 10px;
+}
+
+#intro .intro-content p {
+  font-size: 1em;
+  line-height: 1.7em;
+  color: #4b5862;
 }
 
 #brief {
