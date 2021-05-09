@@ -7,17 +7,25 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Overpass", sans-serif;
 }
 
 button {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-p {
-  font-family: "Overpass", sans-serif;
+.logo {
+  width: 75px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
 }
 
 #title {
@@ -32,8 +40,32 @@ p {
   margin-bottom: 100px;
 }
 
+#title nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 15px;
+  margin-bottom: 54px;
+}
+
+#title nav .icon-hamburger {
+  background: url(../images/icon-hamburger.svg) no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+}
+
+#title nav .icon-hamburger-button {
+  background-color: transparent;
+  border-style: none;
+}
+
 #title .title-content {
-  padding: 0 24px 100px;
+  padding: 0 24px 160px;
 }
 
 #title .title-content h1 {
@@ -75,29 +107,6 @@ p {
 #title .title-content .learn-more:hover {
   background-color: white;
   color: #ff7a85;
-}
-
-#title nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 50px 20px;
-  margin-bottom: 40px;
-}
-
-#title nav .icon-hamburger {
-  background: url(../images/icon-hamburger.svg) no-repeat;
-  display: inline-block;
-  width: 32px;
-  height: 18px;
-}
-
-#title nav .icon-hamburger-button {
-  background-color: transparent;
-  border-style: none;
 }
 
 #intro {
@@ -195,5 +204,41 @@ p {
 
 #footer {
   background-color: #25252d;
+  color: white;
+  text-align: center;
+  border-top-right-radius: 100px;
+  padding-bottom: 75px;
+}
+
+#footer .logo {
+  width: 100px;
+  margin: 60px 0;
+}
+
+#footer p {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+#footer .list {
+  margin: 0 0 50px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#footer .list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#footer .list:last-child {
+  margin: 0;
+}
+
+#footer .list li {
+  color: #c8c8cb;
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 /*# sourceMappingURL=style.css.map */

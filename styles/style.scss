@@ -22,17 +22,24 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Overpass", sans-serif;
 }
 
 button {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-p {
-  font-family: "Overpass", sans-serif;
+.logo {
+  width: 75px;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
 }
 
 #title {
@@ -45,8 +52,28 @@ p {
   text-align: center;
   margin-bottom: 100px;
 
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 15px;
+    margin-bottom: 54px;
+
+    .icon-hamburger {
+      background: url(../images/icon-hamburger.svg) no-repeat;
+      display: inline-block;
+      width: 32px;
+      height: 18px;
+    }
+
+    .icon-hamburger-button {
+      background-color: transparent;
+      border-style: none;
+    }
+  }
+
   .title-content {
-    padding: 0 24px 100px;
+    padding: 0 24px 160px;
 
     h1 {
       font-size: 2.3em;
@@ -84,28 +111,6 @@ p {
         background-color: white;
         color: $veryLightRed2;
       }
-    }
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 20px;
-    margin-bottom: 40px;
-
-    .logo {
-    }
-
-    .icon-hamburger {
-      background: url(../images/icon-hamburger.svg) no-repeat;
-      display: inline-block;
-      width: 32px;
-      height: 18px;
-    }
-
-    .icon-hamburger-button {
-      background-color: transparent;
-      border-style: none;
     }
   }
 }
@@ -204,4 +209,40 @@ p {
 
 #footer {
   background-color: $veryDarkBlackBlue;
+  color: white;
+  text-align: center;
+  border-top-right-radius: 100px;
+  padding-bottom: 75px;
+
+  .logo {
+    width: 100px;
+    margin: 60px 0;
+  }
+
+  p {
+    font-family: "Overpass", sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .list {
+    margin: 0 0 50px;
+    font-family: "Ubuntu", sans-serif;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    li {
+      color: $grayishBlue;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+  }
 }
