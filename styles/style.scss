@@ -8,11 +8,23 @@ $lightRed2: hsl(356, 100%, 66%);
 $grayishBlue: hsl(240, 2%, 79%);
 $grayishBlue2: hsl(240, 2%, 89%);
 $veryDarkBlue: hsl(208, 49%, 24%);
+$veryDarkBlue2: hsl(208, 29%, 34%);
 $veryDarkGrayishBlue: hsl(207, 13%, 34%);
 $veryDarkGreyBlue: hsl(237, 17%, 21%);
 $veryDarkBlackBlue: hsl(240, 10%, 16%);
 $veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
 $veryDarkDesaturatedBlue2: hsl(237, 23%, 28%);
+
+@mixin button-style {
+  font-size: 1em;
+  font-weight: 700;
+  border-style: none;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 30px;
+  height: 44px;
+  width: 135px;
+  color: white;
+}
 
 html {
   margin: 0;
@@ -51,13 +63,15 @@ a {
   border-bottom-left-radius: 100px;
   text-align: center;
   margin-bottom: 100px;
+  padding: 50px 24px 0;
+  height: 545px;
 
   nav {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 50px 15px;
-    margin-bottom: 54px;
+    margin-bottom: 120px;
 
     .icon-hamburger {
       background: url(../images/icon-hamburger.svg) no-repeat;
@@ -65,37 +79,102 @@ a {
       width: 32px;
       height: 18px;
     }
+    .icon-close {
+      background: url(../images/icon-close.svg) no-repeat;
+      display: inline-block;
+      width: 32px;
+      height: 25px;
+    }
 
     .icon-hamburger-button {
       background-color: transparent;
       border-style: none;
     }
+
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      width: 100%;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 8px;
+      right: 0px;
+
+      top: 80px;
+      box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.2);
+
+      .navbar-items {
+        border-bottom: 1px solid hsl(240, 2%, 94%);
+        margin: 0 20px;
+        color: black;
+
+        .list-header {
+          font-size: 1rem;
+          color: $veryDarkBlue;
+
+          cursor: pointer;
+          &::after {
+            content: url(../images/icon-arrow-dark.svg);
+            margin-left: 5px;
+          }
+        }
+
+        .list {
+          display: none;
+          padding: 10px 0;
+          background-color: hsl(240, 2%, 94%);
+          border-radius: 6px;
+
+          li {
+            margin: 15px 0;
+            list-style: none;
+
+            a {
+              font-weight: 600;
+              font-size: 0.9rem;
+              color: $veryDarkBlue2;
+            }
+          }
+        }
+      }
+
+      .navbar-buttons {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .login {
+          @include button-style;
+          color: black;
+          background-color: white;
+          margin-bottom: 10px;
+        }
+
+        .sign-up {
+          @include button-style;
+          background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+        }
+      }
+    }
   }
 
   .title-content {
-    padding: 0 24px 160px;
-
     h1 {
       font-size: 2.3em;
       margin: 0;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.15em;
       margin-bottom: 38px;
     }
 
-    .start-free,
-    .learn-more {
-      font-size: 1em;
-      font-weight: 700;
-      border-style: none;
+    .start-free {
+      @include button-style;
       background-color: white;
       color: $lightRed2;
-      font-family: "Ubuntu", sans-serif;
-      border-radius: 30px;
-      height: 44px;
-      width: 135px;
       &:hover {
         background-color: $veryLightRed2;
         color: white;
@@ -103,6 +182,7 @@ a {
     }
 
     .learn-more {
+      @include button-style;
       margin-left: 10px;
       background-color: transparent;
       border: 1px solid white;

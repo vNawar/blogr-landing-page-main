@@ -38,6 +38,8 @@ a:hover {
   border-bottom-left-radius: 100px;
   text-align: center;
   margin-bottom: 100px;
+  padding: 50px 24px 0;
+  height: 545px;
 }
 
 #title nav {
@@ -45,11 +47,12 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 15px;
-  margin-bottom: 54px;
+  margin-bottom: 120px;
 }
 
 #title nav .icon-hamburger {
@@ -59,13 +62,106 @@ a:hover {
   height: 18px;
 }
 
+#title nav .icon-close {
+  background: url(../images/icon-close.svg) no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 25px;
+}
+
 #title nav .icon-hamburger-button {
   background-color: transparent;
   border-style: none;
 }
 
-#title .title-content {
-  padding: 0 24px 160px;
+#title nav .navbar-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  right: 0px;
+  top: 80px;
+  -webkit-box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+#title nav .navbar-menu .navbar-items {
+  border-bottom: 1px solid #efeff0;
+  margin: 0 20px;
+  color: black;
+}
+
+#title nav .navbar-menu .navbar-items .list-header {
+  font-size: 1rem;
+  color: #1f3f5b;
+  cursor: pointer;
+}
+
+#title nav .navbar-menu .navbar-items .list-header::after {
+  content: url(../images/icon-arrow-dark.svg);
+  margin-left: 5px;
+}
+
+#title nav .navbar-menu .navbar-items .list {
+  display: none;
+  padding: 10px 0;
+  background-color: #efeff0;
+  border-radius: 6px;
+}
+
+#title nav .navbar-menu .navbar-items .list li {
+  margin: 15px 0;
+  list-style: none;
+}
+
+#title nav .navbar-menu .navbar-items .list li a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #3e5870;
+}
+
+#title nav .navbar-menu .navbar-buttons {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+#title nav .navbar-menu .navbar-buttons .login {
+  font-size: 1em;
+  font-weight: 700;
+  border-style: none;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 30px;
+  height: 44px;
+  width: 135px;
+  color: white;
+  color: black;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+#title nav .navbar-menu .navbar-buttons .sign-up {
+  font-size: 1em;
+  font-weight: 700;
+  border-style: none;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 30px;
+  height: 44px;
+  width: 135px;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background-image: linear-gradient(to right, #ff8f70, #ff3d54);
 }
 
 #title .title-content h1 {
@@ -74,30 +170,37 @@ a:hover {
 }
 
 #title .title-content p {
-  font-size: 1.2em;
+  font-size: 1.15em;
   margin-bottom: 38px;
 }
 
-#title .title-content .start-free,
-#title .title-content .learn-more {
+#title .title-content .start-free {
   font-size: 1em;
   font-weight: 700;
   border-style: none;
-  background-color: white;
-  color: #ff525d;
   font-family: "Ubuntu", sans-serif;
   border-radius: 30px;
   height: 44px;
   width: 135px;
+  color: white;
+  background-color: white;
+  color: #ff525d;
 }
 
-#title .title-content .start-free:hover,
-#title .title-content .learn-more:hover {
+#title .title-content .start-free:hover {
   background-color: #ff7a85;
   color: white;
 }
 
 #title .title-content .learn-more {
+  font-size: 1em;
+  font-weight: 700;
+  border-style: none;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 30px;
+  height: 44px;
+  width: 135px;
+  color: white;
   margin-left: 10px;
   background-color: transparent;
   border: 1px solid white;
